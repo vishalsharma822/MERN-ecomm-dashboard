@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
-import Nav from './Nav';
+import Nav from './components/Nav';
+import Footer from './components/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -30,8 +31,9 @@ function App() {
           <Route path='/logout' element={<h1>logout</h1>} />
           <Route path='/profile' element={<h1>Profile</h1>} />
         </Routes>
-        <h1>Welcome to Dashboard</h1>
       </BrowserRouter>
+
+      <Footer />
     </div>
   );
 }
