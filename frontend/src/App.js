@@ -2,6 +2,7 @@
 import './App.css';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
+import Signup from './components/Signup';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path='/delete-product' element={<h1>Delete product component</h1>} />
           <Route path='/logout' element={<h1>logout</h1>} />
           <Route path='/profile' element={<h1>Profile</h1>} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </BrowserRouter>
 
