@@ -1,5 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
+import Nav from './Nav';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
@@ -18,8 +20,18 @@ function App() {
           Learn React
         </a>
       </header> */}
-
-      <h1>Welcome to Dashboard</h1>
+      <BrowserRouter>
+        <Nav />
+        <Routes>
+          <Route path='/' element={<h1>Product list component</h1>} />
+          <Route path="/add-product" element={<h1>Add product</h1>} />
+          <Route path='/update-product' element={<h1>Update Compoment</h1>} />
+          <Route path='/delete-product' element={<h1>Delete product component</h1>} />
+          <Route path='/logout' element={<h1>logout</h1>} />
+          <Route path='/profile' element={<h1>Profile</h1>} />
+        </Routes>
+        <h1>Welcome to Dashboard</h1>
+      </BrowserRouter>
     </div>
   );
 }
